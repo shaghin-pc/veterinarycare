@@ -1,0 +1,144 @@
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/animal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+       <LinearLayout
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:layout_marginTop="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+              android:background="@drawable/button">
+
+
+   <LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:layout_marginBottom="15dp"
+              android:fontFamily="sans-serif-black"
+              android:text="INSURANCE PROPOSAL"
+              android:textColor="#000000"
+              android:textSize="30dp"
+              android:textStyle="bold" />
+
+
+
+
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Ear Tag number"
+           android:inputType="number"
+           android:id="@+id/Eartag"
+           android:background="@drawable/boxdesign"
+           android:textColorHint="#000000"/>
+       <EditText
+           android:id="@+id/Species"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Species/Breed"
+           android:background="@drawable/boxdesign"
+           android:textColorHint="#000000"/>
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Sex"
+           android:textColor="#000000"
+           android:textSize="17dp"
+           android:background="@drawable/boxdesign"/>
+       <Spinner
+           android:id="@+id/petSex"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/boxdesign"
+           android:entries="@array/petSex" />
+
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Color"
+           android:id="@+id/color"
+           android:background="@drawable/boxdesign"
+           android:textColorHint="#000000"/>
+
+       <EditText
+           android:id="@+id/Idmark"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/boxdesign"
+           android:hint="Identifying mark"
+           android:textColorHint="#000000" />
+
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Milk per Day"
+           android:id="@+id/Milk"
+           android:inputType="number"
+           android:background="@drawable/boxdesign"
+           android:textColorHint="#000000"/>
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Age"
+           android:inputType="number"
+           android:id="@+id/age"
+           android:background="@drawable/boxdesign"
+           android:textColorHint="#000000"/>
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Height"
+           android:inputType="number"
+           android:id="@+id/height"
+           android:background="@drawable/boxdesign"
+           android:textColorHint="#000000"/>
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="No of Calving"
+           android:inputType="number"
+           android:id="@+id/nofcalv"
+           android:background="@drawable/boxdesign"
+           android:textColorHint="#000000"/>
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Date of last calving"
+           android:id="@+id/calvingDate"
+           android:background="@drawable/boxdesign"
+           android:textColorHint="#000000"/>
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Whether Pregnant"
+           android:textColor="#000000"
+           android:textSize="17dp"
+           android:background="@drawable/boxdesign"/>
+
+       <Spinner
+           android:id="@+id/pregnant"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/boxdesign"
+           android:entries="@array/Pregnent" />
+       <Button
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Submit"
+           android:id="@+id/submit"
+           android:layout_marginBottom="20dp"
+           android:background="@drawable/button"
+           android:layout_marginTop="20dp"
+           android:layout_gravity="center"
+           android:gravity="center"/>
+
+</LinearLayout>
+       </LinearLayout>
+</ScrollView>

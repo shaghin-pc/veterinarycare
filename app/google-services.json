@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "433104009662",
+    "firebase_url": "https://vetinarycare.firebaseio.com",
+    "project_id": "vetinarycare",
+    "storage_bucket": "vetinarycare.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433104009662:android:1624f5e6af92bfd55fe1ef",
+        "android_client_info": {
+          "package_name": "com.shagi.vetinarycare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433104009662-lr026f6k16loo12f4b67bnfr595n4h8j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shagi.vetinarycare",
+            "certificate_hash": "79cdc97744bc4c0d681050b1b4874fc1ce9f1cbd"
+          }
+        },
+        {
+          "client_id": "433104009662-9q7k29dkuiancbt4bhb209eqchp01422.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxEfR1oCg7ip3bd5jdxe-gRAhbvN_53Kc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433104009662-9q7k29dkuiancbt4bhb209eqchp01422.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

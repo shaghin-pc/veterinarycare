@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">VetinaryCare</string>
+    <string-array name="district">
+        <item>thiruvanathapuram</item>
+        <item>kollam</item>
+        <item>pathanamthitta</item>
+        <item>alapuzha</item>
+        <item>kottayam</item>
+        <item>eranakulam</item>
+        <item>idukki</item>
+        <item>thirissure</item>
+        <item>palakkad</item>
+        <item>malappuram</item>
+        <item>kozhikkod</item>
+        <item>wayanad</item>
+        <item>kannur</item>
+        <item>kasaragod</item>
+    </string-array>
+    <string-array name="petSex">
+        <item>male</item>
+        <item>female</item>
+    </string-array>
+    <string-array name="Pregnent">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string name="title_activity_user_main">UserMainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

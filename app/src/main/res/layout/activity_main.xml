@@ -1,0 +1,66 @@
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/animal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="329dp"
+        android:background="@drawable/button"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow android:gravity="center">
+
+                <Button
+                    android:id="@+id/SLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:text="login" />
+
+                <Button
+                    android:id="@+id/BSignup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:text="signup" />
+            </TableRow>
+        </TableLayout>
+
+        <EditText
+            android:background="@drawable/boxdesign"
+            android:id="@+id/Lemail"
+            android:textColorHint="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="Email id:" />
+
+        <EditText
+            android:textColorHint="#000000"
+            android:background="@drawable/boxdesign"
+            android:id="@+id/Lpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password:" />
+
+
+        <Button
+            android:id="@+id/BLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button"
+            android:text="login" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
