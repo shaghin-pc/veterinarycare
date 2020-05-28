@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.shagi.vetinarycare">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewPet"></activity>
+        <activity android:name=".notification_view"></activity>
+        <activity android:name=".notification" />
+        <activity android:name=".ComplaintsView" />
+        <activity android:name=".PetDetailsView" />
+        <activity android:name=".UserView" />
+        <activity android:name=".AdminLogedIn" />
+        <activity android:name=".adminActivity" />
+        <activity android:name=".vaccination" />
+
+        <receiver android:name="com.allyants.notifyme.NotificationPublisher" />
+        <receiver android:name="com.allyants.notifyme.BootNotifyMe">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".Bath" />
+        <activity android:name=".Hygiene" />
+        <activity android:name=".medicare" />
+        <activity android:name=".profile" />
+        <activity android:name=".HealthyFood" />
+        <activity android:name=".otp_verification" />
+        <activity android:name=".Complaint" />
+        <activity android:name=".ViewPet" />
         <activity android:name=".Addpet" />
         <activity android:name=".LogedIn" />
         <activity android:name=".insurance" />

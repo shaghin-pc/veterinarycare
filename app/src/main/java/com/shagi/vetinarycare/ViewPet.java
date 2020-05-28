@@ -25,7 +25,7 @@ public class ViewPet extends AppCompatActivity {
     RecyclerView.Adapter adapter;
 
     List<PetConstructor> my_list;
-    String save,maile;
+    String save,maile,type;
     DatabaseReference reference,ref;
     SharedPreferences sharedPreferences;
     PetConstructor p1;
@@ -66,6 +66,12 @@ public class ViewPet extends AppCompatActivity {
                                 PetConstructor pet = petDatasnapshot.getValue(PetConstructor.class);
                                 maile=pet.mail;
                                 if(save.equals(maile)){
+                                    String a=pet.Type;
+                                    Toast.makeText(getApplicationContext(),a,Toast.LENGTH_LONG).show();
+
+                                    SharedPreferences.Editor preference = getSharedPreferences("PET", MODE_PRIVATE).edit();
+                                    preference.putString("type",a);
+                                    preference.commit();
                                 my_list.add(pet);}
 
                             }

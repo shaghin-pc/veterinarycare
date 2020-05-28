@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/animal"
+    android:background="#ffffff"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView
         android:id="@+id/mail"
@@ -37,7 +37,7 @@
             android:layout_height="443dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="@drawable/button"
+            android:background="@drawable/colorback"
             android:gravity="center"
             android:orientation="vertical">
 

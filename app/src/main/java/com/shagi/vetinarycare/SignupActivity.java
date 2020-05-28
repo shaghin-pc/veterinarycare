@@ -1,16 +1,21 @@
 package com.shagi.vetinarycare;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -19,16 +24,20 @@ public class SignupActivity extends AppCompatActivity {
     EditText e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12;
     Spinner s1;
     Button b1,b2,b3;
-    String nme,ad,dis,talu,panch,war,hou,rat,adaa,mail,pho,pass,conf;
+    String nme,ad,dis,talu,panch,war,hou,rat,adaa,mail,pho,pass,conf,verificationcode,code;
     RegisterConstructor c1;
     DatabaseReference reference;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
+        mAuth=FirebaseAuth.getInstance();
+
         reference= FirebaseDatabase.getInstance().getReference().child("UserDetails");
+
         c1=new RegisterConstructor();
         e1=(EditText)findViewById(R.id.Name);
         e2=(EditText)findViewById(R.id.Address);
@@ -110,6 +119,9 @@ public class SignupActivity extends AppCompatActivity {
                 } else {
                     if (conf.equals(pass)) {
 
+                        code="91";
+                        pho= "+" + code + pho;
+
                         c1.setName(nme);
                         c1.setAddress(ad);
                         c1.setDistrict(dis);
@@ -122,13 +134,41 @@ public class SignupActivity extends AppCompatActivity {
                         c1.setEmail(mail);
                         c1.setPhone_no(pho);
                         c1.setPassword(pass);
-                        reference.push().setValue(c1);
-                        Toast.makeText(getApplicationContext(), "success", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getApplicationContext(), LogedIn.class);
+                        /*reference.push().setValue(c1).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task)
+                            {
+                                if (task.isSuccessful())
+                                {
+                                    Toast.makeText(getApplicationContext(), "success", Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(getApplicationContext(), LogedIn.class);
+                                    startActivity(intent);
+                                    SharedPreferences.Editor preference = getSharedPreferences("Login", MODE_PRIVATE).edit();
+                                    preference.putString("email", mail);
+                                    preference.commit();
+                                }
+                                else {
+                                    Toast.makeText(SignupActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });*/
+                        Intent intent=new Intent(getApplicationContext(),otp_verification.class);
+                        intent.putExtra("nme", nme);
+                        intent.putExtra("ad", ad);
+                        intent.putExtra("dis", dis);
+                        intent.putExtra("talu", talu);
+                        intent.putExtra("panch", panch);
+                        intent.putExtra("war", war);
+                        intent.putExtra("hou", hou);
+                        intent.putExtra("rat", rat);
+                        intent.putExtra("adaa", adaa);
+                        intent.putExtra("mail", mail);
+                        intent.putExtra("pho", pho);
+                        intent.putExtra("pass", pass);
                         startActivity(intent);
-                        SharedPreferences.Editor preference = getSharedPreferences("Login", MODE_PRIVATE).edit();
-                        preference.putString("email", mail);
-                        preference.commit();
+
+
+
 
                     } else {
                         Toast.makeText(getApplicationContext(), "password is not correct", Toast.LENGTH_LONG).show();

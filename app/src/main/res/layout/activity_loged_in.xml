@@ -1,7 +1,7 @@
 <LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/animal"
+    android:background="@drawable/bck"
     android:gravity="center"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView
@@ -10,9 +10,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="VETERINERY CARE"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="10dp"
         android:textColor="#000000"
         android:textSize="30dp" />
+    
+
 
     <TableLayout
         android:layout_width="match_parent"
@@ -21,23 +23,24 @@
         <TableRow android:gravity="center">
 
             <Button
-                android:id="@+id/Binsurance"
+                android:id="@+id/Baddpet"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/cow"
-                android:text="Insurence"
-                android:textAlignment="center"
-                android:gravity="bottom"/>
+                android:layout_gravity="bottom"
+                android:background="@drawable/addd"
+                android:gravity="bottom"
+                android:text="ADD PET"
+                android:textAlignment="center" />
 
             <Button
                 android:gravity="bottom"
                 android:textAlignment="center"
-                android:layout_marginLeft="10dp"
-                android:id="@+id/Bclaiminsurance"
+                android:layout_marginLeft="70dp"
+                android:id="@+id/Bhealthyfood"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/claim"
-                android:text="claim insurence" />
+                android:background="@drawable/fd"
+                android:text="Healthy food" />
         </TableRow>
         <TableRow android:gravity="center"
             android:layout_marginTop="10dp">
@@ -46,15 +49,19 @@
                 android:id="@+id/Scomplaints"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/button"
+                android:background="@drawable/comp"
+                android:textAlignment="center"
+                android:gravity="bottom"
+                android:layout_gravity="center"
                 android:text="complaints" />
 
             <Button
-                android:layout_marginLeft="10dp"
-                android:id="@+id/BSignup"
+                android:layout_marginLeft="70dp"
+                android:id="@+id/BNotification"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/button"
+                android:gravity="bottom"
+                android:background="@drawable/belll"
                 android:text="notification" />
 
         </TableRow>
@@ -62,20 +69,54 @@
     </TableLayout>
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
         <TableRow android:gravity="center">
 
             <Button
-                android:layout_marginTop="10dp"
-                android:id="@+id/Baddpet"
-                android:layout_width="210dp"
+                android:id="@+id/Binsurance"
+                android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/button"
-                android:text="add pet" />
+                android:background="@drawable/vac"
+                android:gravity="bottom"
+                android:text="vaccination"
+                android:textAlignment="center" />
+            <Button
+                android:gravity="bottom"
+                android:textAlignment="center"
+                android:layout_marginLeft="70dp"
+                android:id="@+id/Bnearest"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/loca"
+                android:text="nearest veterinary" />
+        </TableRow>
+        <TableRow android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/Bprofile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/perso"
+                android:textAlignment="center"
+                android:gravity="bottom"
+                android:layout_gravity="center"
+                android:text="profile" />
+            <Button
+                android:gravity="bottom"
+                android:textAlignment="center"
+                android:layout_marginLeft="70dp"
+                android:id="@+id/BMedicare"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/loca"
+                android:text="medicare" />
+
         </TableRow>
     </TableLayout>
 
-    <TextView
+    <Button
         android:id="@+id/logout"
         android:layout_width="56dp"
         android:layout_height="wrap_content"

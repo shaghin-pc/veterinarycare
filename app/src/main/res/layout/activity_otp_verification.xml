@@ -1,0 +1,96 @@
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_margin="30dp">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical"
+                android:background="#3BFFD500">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <TableRow>
+                        <TextView android:text="OTP is sent to your Mobile Number"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="30dp"
+                            android:textColor="#000000"/>
+                    </TableRow>
+
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="60dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:hint="OTP"
+                        android:textColorHint="#000000"
+                        android:textSize="19dp"
+                        android:textColor="#fff"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="23dp"
+                        android:id="@+id/signupOTP"/>
+
+                    <Button
+                        android:layout_gravity="center"
+                        android:id="@+id/signupOTP_verificationButton"
+                        android:layout_width="134dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/button"
+                        android:padding="11dp"
+                        android:text="verify"
+                        android:textColor="#000000"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        android:layout_marginTop="19dp"
+                        android:layout_gravity="center"
+                        android:id="@+id/progressbar"/>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

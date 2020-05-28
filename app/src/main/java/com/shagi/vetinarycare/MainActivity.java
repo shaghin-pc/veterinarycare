@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,8 +22,10 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
 
     EditText e1,e2;
-    Button b1,b2,b3;
+    Button b1,b2,b3,b4;
+    String verificationcode;
     DatabaseReference reference;
+    FirebaseAuth mAuth;
 
 
     @Override
@@ -31,11 +34,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         reference= FirebaseDatabase.getInstance().getReference().child("UserDetails");
+        mAuth=FirebaseAuth.getInstance();
         e1=(EditText) findViewById(R.id.Lemail);
         e2=(EditText) findViewById(R.id.Lpassword);
         b1=(Button) findViewById(R.id.BLogin);
         b2=(Button) findViewById(R.id.BSignup);
         b3=(Button) findViewById(R.id.SLogin);
+        b4=(Button) findViewById(R.id.Badmin);
 
         SharedPreferences preferences=getSharedPreferences("Login",MODE_PRIVATE);
         String value=preferences.getString("email",null);
@@ -52,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),adminActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

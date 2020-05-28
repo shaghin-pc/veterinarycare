@@ -1,0 +1,416 @@
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:id="@+id/scrl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/colorback"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="REGISTER"
+                android:textColor="#000000"
+                android:textSize="30dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+
+                    <TextView
+                        android:id="@+id/Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boxdesign"
+                        android:hint="ആനുകൂല്യത്തിന്റെ പേര്:"
+                        android:textColorHint="#000000"
+                        android:textSize="20dp" />
+
+                    <Spinner
+                        android:id="@+id/ItemName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boxdesign"
+                        android:entries="@array/district" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/Address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boxdesign"
+                        android:hint="അക്കൗണ്ട് ഉള്ള ബാങ്കിന്റെ പേര്:"
+                        android:textColorHint="#000000"
+                        android:textSize="20dp" />
+
+                    <Spinner
+                        android:id="@+id/BankName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boxdesign"
+                        android:entries="@array/district" />
+                </TableRow>
+            </TableLayout>
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boxdesign"
+                        android:text="ബ്രാഞ്ച്:"
+                        android:textColor="#000000"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/Branch"
+                        android:layout_width="289dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/boxdesign"
+                        android:textColorHint="#000000"
+                        android:textSize="20dp" />
+
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boxdesign"
+                        android:text="IFSC code:"
+                        android:textColor="#000000"
+                        android:textSize="20dp" />
+
+
+                    <EditText
+                        android:id="@+id/Ifsc"
+                        android:layout_width="289dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boxdesign"
+                        android:textColorHint="#000000" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boxdesign"
+                        android:text="ബാങ്ക് അക്കൗണ്ട് നമ്പർ:"
+                        android:textColor="#000000"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/AccountNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boxdesign"
+                        android:textColorHint="#000000"
+                        android:textSize="20dp" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boxdesign"
+                        android:text="എസ്.സി എസ്.ടി വിഭാഗം ആണോ:"
+                        android:textColor="#000000"
+                        android:textSize="20dp"/>
+
+                    <RadioGroup
+                        android:id="@+id/scst"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/scstY"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:checked="false"
+                            android:text="yes" />
+
+                        <RadioButton
+                            android:id="@+id/scstN"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:checked="false"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boxdesign"
+                        android:text="ബി പി എൽ ആണോ:"
+                        android:textSize="20dp"
+                        android:textColor="#000000" />
+
+                    <RadioGroup
+                        android:id="@+id/bpl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/bplY"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:checked="false"
+                            android:text="yes" />
+
+                        <RadioButton
+                            android:id="@+id/bplN"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:checked="false"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boxdesign"
+                        android:text="കുടുംബ വാർഷിക വരുമാനം:"
+                        android:textColor="#000000"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/AnnualIncome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boxdesign"
+                        android:textColorHint="#000000"
+                        android:textSize="20dp" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boxdesign"
+                        android:text="സ്ത്രീ കുടുംബനാഥയായ കുടുംബമാണോ:"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+
+                    <RadioGroup
+                        android:id="@+id/Women"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/womenY"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:checked="false"
+                            android:text="yes" />
+
+                        <RadioButton
+                            android:id="@+id/womenN"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:checked="false"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+            </TableLayout>
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boxdesign"
+                android:textSize="17dp"
+                android:text="അപേക്ഷിക്കുന്നത് വികലാംഗ ആണോ:"
+                android:textColor="#000000" />
+        <RadioGroup
+            android:id="@+id/Handcap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/HandcapY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:text="yes" />
+
+            <RadioButton
+                android:id="@+id/HandcapNz"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:text="No" />
+        </RadioGroup>
+    </TableRow>
+</TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boxdesign"
+                android:text="പെൺമക്കൾ മാത്രം ഉള്ള കുടുംബമാണോ"
+                android:textSize="17dp"
+                android:textColor="#000000" />
+                    <RadioGroup
+                        android:id="@+id/Girl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/GirlY"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:checked="false"
+                            android:text="yes" />
+
+                        <RadioButton
+                            android:id="@+id/GirlN"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:checked="false"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boxdesign"
+                android:text="ഇതിനുമുൻപ് ആനുകൂല്യം ലഭിച്ചിട്ടുണ്ടോ:"
+                android:textSize="18dp"
+                android:textColor="#000000" />
+                    <RadioGroup
+                        android:id="@+id/Befor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/beforeY"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:checked="false"
+                            android:text="yes" />
+
+                        <RadioButton
+                            android:id="@+id/beforeN"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:checked="false"
+                            android:text="No" />
+                    </RadioGroup>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boxdesign"
+                android:text="കുടുംബത്തിന്റെ മുഖ്യ തൊഴിൽ:"
+                android:textSize="18dp"
+                android:textColor="#000000" />
+                    <EditText
+                        android:id="@+id/MainJob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boxdesign"
+                        android:textColorHint="#000000"
+                        android:textSize="20dp" />
+                </TableRow>
+            </TableLayout>
+
+
+            <Button
+                android:id="@+id/Submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button"
+                android:text="submit" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

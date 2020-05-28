@@ -2,13 +2,11 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#ffffff"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
         android:layout_width="350dp"
         android:layout_height="329dp"
-        android:background="@drawable/colorback"
         android:orientation="vertical">
 
         <TableLayout
@@ -21,30 +19,20 @@
                     android:id="@+id/SLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/button"
                     android:text="login" />
-
-                <Button
-                    android:id="@+id/BSignup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/button"
-                    android:text="signup" />
             </TableRow>
         </TableLayout>
 
         <EditText
-            android:background="@drawable/boxdesign"
-            android:id="@+id/Lemail"
+            android:id="@+id/Ladmin"
             android:textColorHint="#000000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:hint="Email id:" />
+            android:hint="Admin id:" />
 
         <EditText
             android:textColorHint="#000000"
-            android:background="@drawable/boxdesign"
             android:id="@+id/Lpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,19 +45,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:background="@drawable/button"
             android:text="login" />
 
 
     </LinearLayout>
-
-    <Button
-        android:layout_marginTop="20dp"
-        android:id="@+id/Badmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button"
-        android:text="Admin login" />
-
 
 </LinearLayout>
